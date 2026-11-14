@@ -8,7 +8,18 @@ import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import java.util.List;
+
+
+@Tag(
+        name = "Gestión de Flushing",
+        description = "Operaciones para administrar los registros de limpieza de bebederos"
+)
 
 @RestController
 @RequestMapping("/api/flushings")
@@ -21,6 +32,7 @@ public class FlushingController {
     }
 
     // GET: consultar todos o filtrar por línea
+    @Operation(summary = "Consultar un flushing por ID")
     @GetMapping
     public List<Flushing> listar(
             @RequestParam(required = false) Long lineaId) {
@@ -43,6 +55,7 @@ public class FlushingController {
     }
 
     // POST: registrar un flushing
+    @Operation(summary = "Registrar un nuevo flushing")
     @PostMapping
     public ResponseEntity<Flushing> crear(
             @Valid @RequestBody FlushingRequest request) {
@@ -61,6 +74,7 @@ public class FlushingController {
     }
 
     // PUT: actualizar la observación
+    @Operation(summary = "Actualizar la observación de un flushing")
     @PutMapping("/{id}")
     public ResponseEntity<Flushing> actualizar(
             @PathVariable Long id,
@@ -76,6 +90,7 @@ public class FlushingController {
     }
 
     // DELETE: eliminar un flushing
+    @Operation(summary = "Eliminar un flushing")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(
             @PathVariable Long id) {
