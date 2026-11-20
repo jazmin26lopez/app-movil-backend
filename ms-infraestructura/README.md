@@ -4,7 +4,7 @@ Microservicio desarrollado con **Spring Boot y Oracle Database** para administra
 
 Proyecto desarrollado para la asignatura **DSY1105 — Desarrollo de Aplicaciones Móviles**, Duoc UC.
 
-**Responsable:** Briam Arciniegas.
+**Responsable:** Bryam Arciniegas.
 
 ## Descripción
 
