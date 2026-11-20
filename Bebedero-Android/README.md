@@ -6,7 +6,7 @@ Proyecto desarrollado para la asignatura **DSY1105 — Desarrollo de Aplicacione
 
 ## Integrantes
 
-- Bray Arciniegas — GitHub: [BrayArciniegas](https://github.com/BrayArciniegas)
+- Bryam Arciniegas — GitHub: [BrayArciniegas](https://github.com/BrayArciniegas)
 - Jazmin López — GitHub: [jazmin26lopez](https://github.com/jazmin26lopez)
 
 ## Descripción del proyecto
