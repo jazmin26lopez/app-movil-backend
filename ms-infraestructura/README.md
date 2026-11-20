@@ -63,31 +63,22 @@ La información se organiza jerárquicamente:
 | Método | Endpoint | Descripción |
 |---|---|---|
 | GET | `/api/granjas` | Lista todas las granjas |
-| GET | `/api/granjas/{id}` | Consulta una granja |
-| POST | `/api/granjas` | Crea una granja |
-| PUT | `/api/granjas/{id}` | Actualiza una granja |
-| DELETE | `/api/granjas/{id}` | Elimina una granja |
 
 ### Galpones
 
 | Método | Endpoint | Descripción |
 |---|---|---|
-| GET | `/api/galpones` | Lista todos los galpones |
-| GET | `/api/galpones/{id}` | Consulta un galpón |
-| POST | `/api/galpones` | Crea un galpón |
-| PUT | `/api/galpones/{id}` | Actualiza un galpón |
-| DELETE | `/api/galpones/{id}` | Elimina un galpón |
+| GET | `/api/galpones` | Lista galpones (filtrable por `?granjaId=`) |
 
 ### Líneas de bebederos
 
 | Método | Endpoint | Descripción |
 |---|---|---|
-| GET | `/api/lineas` | Lista todas las líneas |
-| GET | `/api/lineas/{id}` | Consulta una línea |
-| POST | `/api/lineas` | Crea una línea |
+| GET | `/api/lineas` | Lista líneas (filtrable por `?galponId=`) |
 | PUT | `/api/lineas/{id}` | Actualiza una línea y su temperatura |
-| DELETE | `/api/lineas/{id}` | Elimina una línea |
 | GET | `/api/lineas/{id}/mediciones` | Consulta el historial de temperaturas |
+
+**Nota:** solo se exponen los endpoints que la app Android realmente consume. Granjas, Galpones y Líneas se consultan de solo lectura desde la app (nunca se crean, editan ni eliminan desde la interfaz); por eso no existen endpoints `POST`/`DELETE` ni `GET /{id}` para esas tres entidades — se retiraron por ser código sin uso.
 
 ## Monitoreo de temperaturas
 
@@ -291,7 +282,7 @@ Estos porcentajes corresponden a las clases Android incluidas en el informe JaCo
 ## Documentación relacionada
 
 - [README principal del proyecto](../README.md)
-- [Aplicación Android](../Bebedero-Android/README.md)
+- [Aplicación Android](https://github.com/jazmin26lopez/Bebedero)
 - [Microservicio de flushing](../ms-flushing/README.md)
 
 ## Repositorio oficial
