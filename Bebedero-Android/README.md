@@ -29,15 +29,41 @@ El sistema utiliza una aplicación Android conectada mediante Retrofit a dos mic
 
 ## Pruebas unitarias
 
-Las pruebas Android utilizan JUnit4, MockK y kotlinx-coroutines-test.
+La aplicación cuenta con pruebas unitarias implementadas con JUnit4, MockK y `kotlinx-coroutines-test`.
 
-En la ejecución local verificada, JaCoCo informó:
+Se incluyen pruebas para:
 
-- Cobertura de instrucciones: **96 %**.
-- Cobertura de ramas: **86 %**.
+- `FlushingViewModelTest`: validación de observaciones y operaciones de flushing.
+- `ConsultaViewModelTest`: consultas y procesamiento de información.
+- `BebederoRepositoryTest`: comunicación con microservicios, manejo de errores, respaldo local con Room, registros de flushing y notificaciones según el rol.
 
-Los porcentajes corresponden a las clases incluidas en la configuración de JaCoCo.
+### Cobertura de código
 
+Resultados verificados mediante JaCoCo:
+
+| Componente | Instrucciones | Ramas |
+|---|---:|---:|
+| ViewModels | 87 % | 100 % |
+| Repository | 97 % | 84 % |
+| **Total** | **96 %** | **86 %** |
+
+La cobertura corresponde a las clases incluidas en la configuración de JaCoCo.
+
+### Ejecutar las pruebas
+
+```powershell
+.\gradlew.bat :app:testDebugUnitTest
+```
+
+### Generar el informe de cobertura
+
+```powershell
+.\gradlew.bat :app:jacocoTestReport
+```
+
+El informe HTML se genera en:
+
+`app/build/reports/jacoco/jacocoTestReport/html/index.html`
 ## Documentación
 
 - [Aplicación Android](Bebedero-Android/README.md)
