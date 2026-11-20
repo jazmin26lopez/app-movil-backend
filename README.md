@@ -48,15 +48,13 @@ Además, incorpora Room para almacenamiento local y Open-Meteo para consultar la
 
 Las pruebas Android utilizan JUnit4, MockK y kotlinx-coroutines-test.
 
-Resultados verificados con JaCoCo:
+57 pruebas en total. Resultados verificados con JaCoCo:
 
-| Componente | Instrucciones | Ramas |
-|---|---:|---:|
-| ViewModels | 87 % | 100 % |
-| Repository | 97 % | 84 % |
-| **Total analizado** | **96 %** | **86 %** |
+| Componente | Líneas | Instrucciones | Ramas |
+|---|---:|---:|---:|
+| ViewModels + Repository | 99.4 % | 96.3 % | 86.5 % |
 
-La cobertura corresponde a las clases incluidas en la configuración de JaCoCo y supera el mínimo del 80 % en ambas métricas.
+La cobertura corresponde a las clases incluidas en la configuración de JaCoCo (ViewModels y Repository) y supera el mínimo del 80 % en las tres métricas.
 
 ## Instalación
 
